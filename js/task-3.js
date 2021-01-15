@@ -15,8 +15,7 @@ class Storage {
     const newItems = [];
 
     for (const item of this._items) {
-      if (item === removedItem) continue;
-      newItems.push(item);
+      if (item !== removedItem) newItems.push(item);
     }
     this._items = newItems;
   }
